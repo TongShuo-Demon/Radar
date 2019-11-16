@@ -1,0 +1,40 @@
+%YAML:1.0
+---
+
+#小车面积范围
+vehicle_min_area: 800
+vehicle_max_area: 35000
+
+#c长与宽比值筛选
+vehicle_heigth_div_width_min: 0.5
+vehicle_heigth_div_width_max: 2
+
+#像素比约束值
+pixel_percent_limit: 0.01
+
+#中心区域长宽比限制
+center_rect_div_limit: 0.75
+
+#装甲板区域长宽比限制
+armor_rect_div_limit: 0.4
+
+
+#中心点距离图像边界限制 190 *0.75
+roi_size: 190
+
+#中心圆与装甲板中心距离限制 170  200 *0.75
+distance_lower:  100
+distance_upper:  200
+
+#预测增加角度
+predict_angle: 20
+
+#预测重力补偿
+predict_gravity_x: -17
+predict_gravity_y: -45
+
+#判断顺逆时针间隔帧数
+clock_wise_frame: 20
+
+#SVM路径
+svm_model_path: ../cfg/cubot_svm_4_30_dafu.xml

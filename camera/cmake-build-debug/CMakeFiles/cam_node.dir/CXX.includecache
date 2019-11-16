@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/demon/CLionProjects/autohit/camera/camParaConfig.cpp
+../include/camera/camParaConfig.h
+/home/demon/CLionProjects/autohit/include/camera/camParaConfig.h
+opencv2/opencv.hpp
+-
+
+/home/demon/CLionProjects/autohit/camera/cam_mode.cpp
+opencv2/opencv.hpp
+-
+iostream
+-
+../include/camera/startFetch.hpp
+/home/demon/CLionProjects/autohit/include/camera/startFetch.hpp
+../include/camera/shm.hpp
+/home/demon/CLionProjects/autohit/include/camera/shm.hpp
+
+/home/demon/CLionProjects/autohit/camera/shm.cpp
+shm.hpp
+/home/demon/CLionProjects/autohit/camera/shm.hpp
+
+/home/demon/CLionProjects/autohit/camera/startFetch.cpp
+../include/camera/startFetch.hpp
+/home/demon/CLionProjects/autohit/include/camera/startFetch.hpp
+
+/home/demon/CLionProjects/autohit/camera/streamRetrieve.cpp
+stdlib.h
+-
+../include/camera/StreamRetrieve.h
+/home/demon/CLionProjects/autohit/include/camera/StreamRetrieve.h
+../include/camera/camParaConfig.h
+/home/demon/CLionProjects/autohit/include/camera/camParaConfig.h
+../include/camera/shm.hpp
+/home/demon/CLionProjects/autohit/include/camera/shm.hpp
+
