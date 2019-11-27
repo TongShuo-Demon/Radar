@@ -1,3 +1,4 @@
+
 //参考方法：https://www.cnblogs.com/little-monkey/p/7637130.html
 // #include "opencv2/opencv.hpp"
 //#include<iostream>
@@ -96,9 +97,7 @@
 //
 
 
-
-
-//实现写视频功能
+//////实现写视频功能
 //#include<opencv2/opencv.hpp>
 //#include<iostream>
 //using namespace cv;
@@ -107,12 +106,12 @@
 //int main()
 //{
 ////    'M', 'J', 'P', 'G'　　　　'X','V','I','D'
-//    VideoWriter writer("12mm_red.avi",cv::VideoWriter::fourcc('X','V','I','D'),10,Size(1280,1024),true);//Size要和图片尺寸保持一致
+//    VideoWriter writer("6mm_red.avi",cv::VideoWriter::fourcc('X','V','I','D'),10,Size(1280,1024),true);//Size要和图片尺寸保持一致
 //    char filename[50];
 //    Mat frame;
 //    for (int i = 1; i < 1067; i++)
 //    {
-//        sprintf(filename,"/media/demon/UBUNTU 16_0/pictures/12mm-red-night/%d.bmp",i);
+//        sprintf(filename,"//home/demon/MVViewer/pictures/%d.bmp",i);
 //        frame=imread(filename);
 //        if(frame.empty())   break;
 //        writer<<frame;
@@ -124,9 +123,6 @@
 //}
 
 
-//
-//
-//
 ////参考链接：https://blog.csdn.net/qq_32925781/article/details/52878465
 ////https://docs.opencv.org/4.1.0/d1/dc5/tutorial_background_subtraction.html
 //// 方法：BackgroundSubtractorMOG2
@@ -155,7 +151,7 @@ int main()
     cv::Mat src;
     Vehicles vehicles;
     detect_vehicle detectvehicle;
-    VideoCapture capture("12mm_red.avi"); //参数为0，默认从摄像头读取视频
+    VideoCapture capture("6mm_red.avi");
 
     if(!capture.isOpened()){
         cout << "Unable to open the video! " << endl;
@@ -167,9 +163,13 @@ int main()
             exit(0);
         }
         resize(src, src, cv::Size(640,480),0,0,cv::INTER_AREA);
-        detectvehicle.processVideoKNN(src,vehicles);
 
-//        std::cout<<ROI_find_blob(src)<<std::endl;
+//        long start,end;
+//        start = getCurrentTime__();
+        detectvehicle.processVideoKNN(src,vehicles);     //运行时间，大约20多ms
+
+//        end = getCurrentTime__();
+//        std::cout << end-start << std::endl;
 
         int key;
         key = waitKey(20);
@@ -178,8 +178,6 @@ int main()
 
     }
     destroyAllWindows();
-
-
 }
 
 
@@ -286,5 +284,7 @@ int main()
 //    }
 //
 //    capture.release();
+//}
+
 //}
 

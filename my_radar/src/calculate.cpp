@@ -4,10 +4,6 @@
 #include <calculate.hpp>
 
 
-
-
-
-
 //1、描述：
 //判断矩形是否在图像内
 //2、输入：
@@ -124,6 +120,9 @@ cv::Point get_cross_point(cv::Point &p00, cv::Point &p01, cv::Point &p10, cv::Po
 
     return cross_point;  //平行返回(0,0)
 }
+
+
+
 
 
 

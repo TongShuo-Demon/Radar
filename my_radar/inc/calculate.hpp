@@ -7,6 +7,9 @@
 
 #include <iostream>
 #include <opencv2/opencv.hpp>
+#include <radar_main.hpp>
+#include <pretreatment.hpp>
+
 
 
 bool limit_rect(cv::Rect &rect, int rows, int cols);

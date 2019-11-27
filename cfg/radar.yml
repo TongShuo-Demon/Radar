@@ -2,8 +2,8 @@
 ---
 
 #小车面积范围
-vehicle_min_area: 800
-vehicle_max_area: 35000
+vehicle_min_area: 1000
+vehicle_max_area: 28000
 
 #c长与宽比值筛选
 vehicle_heigth_div_width_min: 0.5
