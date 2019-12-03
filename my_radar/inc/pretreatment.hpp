@@ -13,6 +13,11 @@
 #include <radar_main.hpp>
 #include <calculate.hpp>
 #include <sys/time.h>
+#include <eigen3/Eigen/Core>
+#include <eigen3/Eigen/Geometry>  // Eigen 几何模块
+#include <opencv2/core/eigen.hpp>
+
+
 
 #define RED    1
 #define BLUE   0
@@ -27,7 +32,6 @@ public:
 cv::Point vehicle_vertex[4];      //检测到车辆的四个顶点
 cv::Point sp;                    //车辆中心点
 int color;                       //车辆颜色
-
 };
 typedef std::vector<Vehicle> Vehicles;
 
@@ -41,7 +45,7 @@ private:
     int num=0;
 public:
 
-    void processVideoMOG2(cv::Mat src);
+
     Vehicles processVideoKNN(cv::Mat src,Vehicles vehicles);
 
 };

@@ -91,7 +91,6 @@ std::string intToString(int number)
 
 //p00和p01是一条线段的两个端点
 //p10和P11是另一条线段的两个端点
-//
 cv::Point get_cross_point(cv::Point &p00, cv::Point &p01, cv::Point &p10, cv::Point &p11)
 {
     double x_member, x_denominator, y_member, y_denominator;

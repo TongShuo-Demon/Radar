@@ -42,7 +42,7 @@
         boost::interprocess::shared_memory_object::remove(publisher::shm_name.c_str());
         boost::interprocess::named_mutex::remove(publisher::lock_name.c_str());
     }
-
+//订阅器
     subscriber::subscriber(const char* node_name)
     {
         subscriber::lock_name = string(node_name)+"_lock";

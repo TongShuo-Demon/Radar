@@ -1,8 +1,8 @@
-#include "../include_camera/camera/camParaConfig.h"
+#include "camParaConfig.h"
 #include <opencv2/opencv.hpp>
 using namespace cv;
 using namespace std;
-
+//读取相机参数
 void getCamParaFromYml(const std::string &filename, daHuaPara_str &_daHuaPara)
 {
     FileStorage fs2(filename, FileStorage::READ);
@@ -41,7 +41,7 @@ void getCamParaFromYml(const std::string &filename, daHuaPara_str &_daHuaPara)
 
     fs2.release();
 }
-
+//相机参数设置
 void camParaConfig(ICameraPtr &cameraSptr, const daHuaPara_str &_daHuaPara, int &IsSetCamParaSucc)
 {
     int success_flag = 0;
