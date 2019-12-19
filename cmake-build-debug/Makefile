@@ -123,6 +123,59 @@ Radar/fast:
 	$(MAKE) -f CMakeFiles/Radar.dir/build.make CMakeFiles/Radar.dir/build
 .PHONY : Radar/fast
 
+#=============================================================================
+# Target rules for targets named cam_node
+
+# Build rule for target.
+cam_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cam_node
+.PHONY : cam_node
+
+# fast build rule for target.
+cam_node/fast:
+	$(MAKE) -f camera/src/CMakeFiles/cam_node.dir/build.make camera/src/CMakeFiles/cam_node.dir/build
+.PHONY : cam_node/fast
+
+#=============================================================================
+# Target rules for targets named cam_node2
+
+# Build rule for target.
+cam_node2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cam_node2
+.PHONY : cam_node2
+
+# fast build rule for target.
+cam_node2/fast:
+	$(MAKE) -f camera2/src/CMakeFiles/cam_node2.dir/build.make camera2/src/CMakeFiles/cam_node2.dir/build
+.PHONY : cam_node2/fast
+
+camera/src/shm.o: camera/src/shm.cpp.o
+
+.PHONY : camera/src/shm.o
+
+# target to build an object file
+camera/src/shm.cpp.o:
+	$(MAKE) -f CMakeFiles/Radar.dir/build.make CMakeFiles/Radar.dir/camera/src/shm.cpp.o
+.PHONY : camera/src/shm.cpp.o
+
+camera/src/shm.i: camera/src/shm.cpp.i
+
+.PHONY : camera/src/shm.i
+
+# target to preprocess a source file
+camera/src/shm.cpp.i:
+	$(MAKE) -f CMakeFiles/Radar.dir/build.make CMakeFiles/Radar.dir/camera/src/shm.cpp.i
+.PHONY : camera/src/shm.cpp.i
+
+camera/src/shm.s: camera/src/shm.cpp.s
+
+.PHONY : camera/src/shm.s
+
+# target to generate assembly for a file
+camera/src/shm.cpp.s:
+	$(MAKE) -f CMakeFiles/Radar.dir/build.make CMakeFiles/Radar.dir/camera/src/shm.cpp.s
+.PHONY : camera/src/shm.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -231,6 +284,33 @@ my_radar/src/radar_main.cpp.s:
 	$(MAKE) -f CMakeFiles/Radar.dir/build.make CMakeFiles/Radar.dir/my_radar/src/radar_main.cpp.s
 .PHONY : my_radar/src/radar_main.cpp.s
 
+my_radar/src/video_write.o: my_radar/src/video_write.cpp.o
+
+.PHONY : my_radar/src/video_write.o
+
+# target to build an object file
+my_radar/src/video_write.cpp.o:
+	$(MAKE) -f CMakeFiles/Radar.dir/build.make CMakeFiles/Radar.dir/my_radar/src/video_write.cpp.o
+.PHONY : my_radar/src/video_write.cpp.o
+
+my_radar/src/video_write.i: my_radar/src/video_write.cpp.i
+
+.PHONY : my_radar/src/video_write.i
+
+# target to preprocess a source file
+my_radar/src/video_write.cpp.i:
+	$(MAKE) -f CMakeFiles/Radar.dir/build.make CMakeFiles/Radar.dir/my_radar/src/video_write.cpp.i
+.PHONY : my_radar/src/video_write.cpp.i
+
+my_radar/src/video_write.s: my_radar/src/video_write.cpp.s
+
+.PHONY : my_radar/src/video_write.s
+
+# target to generate assembly for a file
+my_radar/src/video_write.cpp.s:
+	$(MAKE) -f CMakeFiles/Radar.dir/build.make CMakeFiles/Radar.dir/my_radar/src/video_write.cpp.s
+.PHONY : my_radar/src/video_write.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -240,6 +320,11 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Radar"
 	@echo "... edit_cache"
+	@echo "... cam_node"
+	@echo "... cam_node2"
+	@echo "... camera/src/shm.o"
+	@echo "... camera/src/shm.i"
+	@echo "... camera/src/shm.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -252,6 +337,9 @@ help:
 	@echo "... my_radar/src/radar_main.o"
 	@echo "... my_radar/src/radar_main.i"
 	@echo "... my_radar/src/radar_main.s"
+	@echo "... my_radar/src/video_write.o"
+	@echo "... my_radar/src/video_write.i"
+	@echo "... my_radar/src/video_write.s"
 .PHONY : help
 
 

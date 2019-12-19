@@ -32,6 +32,7 @@ public:
 cv::Point vehicle_vertex[4];      //检测到车辆的四个顶点
 cv::Point sp;                    //车辆中心点
 int color;                       //车辆颜色
+cv::Point2d World_Coordinate;
 };
 typedef std::vector<Vehicle> Vehicles;
 
@@ -45,7 +46,6 @@ private:
     int num=0;
 public:
 
-
     Vehicles processVideoKNN(cv::Mat src,Vehicles vehicles);
 
 };
@@ -58,7 +58,7 @@ public:
 
 
 
-int final_shaixuan(int num,Vehicles vehicles);
+
 
 
 

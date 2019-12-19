@@ -79,7 +79,7 @@ bool limit_rect(cv::Rect &rect, int rows, int cols)
 
 
 
-std::string intToString(int number)
+std::string intToString(double number)
 {
     //this function has a number input and string output
     std::stringstream ss;
@@ -122,7 +122,54 @@ cv::Point get_cross_point(cv::Point &p00, cv::Point &p01, cv::Point &p10, cv::Po
 
 
 
+// Calculates rotation matrix given euler angles.
+Eigen::Matrix3d eulerAnglesToRotationMatrix(Eigen::Vector3d &theta)
+{
+    Eigen::Matrix3d R_x,R_y,R_z,R;
+    theta << theta[0]*PI/180, theta[1]*PI/180, theta[2]*PI/180;
 
+    R_x <<  1,       0,              0,
+            0,       cos(theta[0]),   -sin(theta[0]),
+            0,       sin(theta[0]),   cos(theta[0]);
+
+    R_y << cos(theta[1]),    0,      sin(theta[1]),
+            0,               1,      0,
+            -sin(theta[1]),   0,      cos(theta[1]);
+
+    R_z << cos(theta[2]),    -sin(theta[2]),      0,
+            sin(theta[2]),    cos(theta[2]),      0,
+            0,                0,                   1;
+
+
+    R = R_z*R_y*R_x;
+   return R;
+}
+
+
+Eigen::Vector3d cameraToWorld(Eigen::Matrix3d cameraMatrix, Eigen::Matrix3d rv, Eigen::Vector3d tv,cv::Point connor)
+{
+    Eigen::Vector3d pixel;
+    pixel << connor.x,connor.y,1.0;
+
+    //计算 invR * T
+    Eigen::Matrix3d invR;
+    Eigen::Vector3d transPlaneToCam,worldPtCam,worldPtPlane,scale_worldPtPlane,world;
+    invR=rv.inverse();
+    transPlaneToCam =  invR* tv ;
+    //[x,y,z] = invK * [u,v,1]
+    worldPtCam = cameraMatrix.inverse()*pixel;
+    //[x,y,1] * invR
+    worldPtPlane = invR * worldPtCam;
+    //zc,存在疑问
+    float scale = transPlaneToCam[2] / worldPtPlane[2];
+    //zc * [x,y,1] * invR
+    scale_worldPtPlane = scale * worldPtPlane;
+    //[X,Y,Z]=zc*[x,y,1]*invR - invR*T
+    world = scale_worldPtPlane - transPlaneToCam;
+    world << -world[0]+2,world[1],0;           //补偿结果
+    std::cout << world;
+    return world;
+}
 
 
 

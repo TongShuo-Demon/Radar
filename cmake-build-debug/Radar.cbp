@@ -5,7 +5,7 @@
 		<Option title="Radar"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\usr\lib\cmake\eigen3\;CMake Files\camera\;CMake Files\camera\src\;CMake Files\camera2\;CMake Files\camera2\src\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/demon/CLionProjects/Radar/cmake-build-debug"/>
@@ -28,13 +28,18 @@
 				</MakeCommands>
 			</Target>
 			<Target title="Radar">
-				<Option output="/home/demon/CLionProjects/Radar/cmake-build-debug/Radar" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/demon/CLionProjects/Radar/cmake-build-debug"/>
+				<Option output="/home/demon/CLionProjects/Radar/bin/Radar" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/demon/CLionProjects/Radar/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/opt/DahuaTech/MVViewer/include"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/home/demon/CLionProjects/Radar/my_radar/inc"/>
+					<Add directory="/home/demon/CLionProjects/Radar/camera/inc"/>
+					<Add directory="/home/demon/CLionProjects/Radar/camera2/inc"/>
+					<Add directory="/home/demon/CLionProjects/Radar/my_radar"/>
 					<Add directory="/usr/local/include/opencv4"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
@@ -53,13 +58,18 @@
 				</MakeCommands>
 			</Target>
 			<Target title="Radar/fast">
-				<Option output="/home/demon/CLionProjects/Radar/cmake-build-debug/Radar" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/demon/CLionProjects/Radar/cmake-build-debug"/>
+				<Option output="/home/demon/CLionProjects/Radar/bin/Radar" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/demon/CLionProjects/Radar/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/opt/DahuaTech/MVViewer/include"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/home/demon/CLionProjects/Radar/my_radar/inc"/>
+					<Add directory="/home/demon/CLionProjects/Radar/camera/inc"/>
+					<Add directory="/home/demon/CLionProjects/Radar/camera2/inc"/>
+					<Add directory="/home/demon/CLionProjects/Radar/my_radar"/>
 					<Add directory="/usr/local/include/opencv4"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
@@ -87,7 +97,158 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/demon/CLionProjects/Radar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="cam_node">
+				<Option output="/home/demon/CLionProjects/Radar/bin/cam_node" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/demon/CLionProjects/Radar/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/DahuaTech/MVViewer/include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/home/demon/CLionProjects/Radar/my_radar/inc"/>
+					<Add directory="/home/demon/CLionProjects/Radar/camera/inc"/>
+					<Add directory="/home/demon/CLionProjects/Radar/camera2/inc"/>
+					<Add directory="/home/demon/CLionProjects/Radar/my_radar"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/demon/CLionProjects/Radar/cmake-build-debug/camera/src/Makefile&quot;  VERBOSE=1 cam_node"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/demon/CLionProjects/Radar/cmake-build-debug/camera/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/demon/CLionProjects/Radar/cmake-build-debug/camera/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/demon/CLionProjects/Radar/cmake-build-debug/camera/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cam_node/fast">
+				<Option output="/home/demon/CLionProjects/Radar/bin/cam_node" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/demon/CLionProjects/Radar/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/DahuaTech/MVViewer/include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/home/demon/CLionProjects/Radar/my_radar/inc"/>
+					<Add directory="/home/demon/CLionProjects/Radar/camera/inc"/>
+					<Add directory="/home/demon/CLionProjects/Radar/camera2/inc"/>
+					<Add directory="/home/demon/CLionProjects/Radar/my_radar"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/demon/CLionProjects/Radar/cmake-build-debug/camera/src/Makefile&quot;  VERBOSE=1 cam_node/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/demon/CLionProjects/Radar/cmake-build-debug/camera/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/demon/CLionProjects/Radar/cmake-build-debug/camera/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/demon/CLionProjects/Radar/cmake-build-debug/camera/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cam_node2">
+				<Option output="/home/demon/CLionProjects/Radar/bin/cam_node2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/demon/CLionProjects/Radar/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/DahuaTech/MVViewer/include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/home/demon/CLionProjects/Radar/my_radar/inc"/>
+					<Add directory="/home/demon/CLionProjects/Radar/camera/inc"/>
+					<Add directory="/home/demon/CLionProjects/Radar/camera2/inc"/>
+					<Add directory="/home/demon/CLionProjects/Radar/my_radar"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/demon/CLionProjects/Radar/cmake-build-debug/camera2/src/Makefile&quot;  VERBOSE=1 cam_node2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/demon/CLionProjects/Radar/cmake-build-debug/camera2/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/demon/CLionProjects/Radar/cmake-build-debug/camera2/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/demon/CLionProjects/Radar/cmake-build-debug/camera2/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cam_node2/fast">
+				<Option output="/home/demon/CLionProjects/Radar/bin/cam_node2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/demon/CLionProjects/Radar/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/DahuaTech/MVViewer/include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/home/demon/CLionProjects/Radar/my_radar/inc"/>
+					<Add directory="/home/demon/CLionProjects/Radar/camera/inc"/>
+					<Add directory="/home/demon/CLionProjects/Radar/camera2/inc"/>
+					<Add directory="/home/demon/CLionProjects/Radar/my_radar"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/demon/CLionProjects/Radar/cmake-build-debug/camera2/src/Makefile&quot;  VERBOSE=1 cam_node2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/demon/CLionProjects/Radar/cmake-build-debug/camera2/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/demon/CLionProjects/Radar/cmake-build-debug/camera2/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/demon/CLionProjects/Radar/cmake-build-debug/camera2/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
+		<Unit filename="/home/demon/CLionProjects/Radar/camera/src/camParaConfig.cpp">
+			<Option target="cam_node"/>
+		</Unit>
+		<Unit filename="/home/demon/CLionProjects/Radar/camera/src/cam_mode.cpp">
+			<Option target="cam_node"/>
+		</Unit>
+		<Unit filename="/home/demon/CLionProjects/Radar/camera/src/shm.cpp">
+			<Option target="Radar"/>
+			<Option target="cam_node"/>
+		</Unit>
+		<Unit filename="/home/demon/CLionProjects/Radar/camera/src/startFetch.cpp">
+			<Option target="cam_node"/>
+		</Unit>
+		<Unit filename="/home/demon/CLionProjects/Radar/camera/src/streamRetrieve.cpp">
+			<Option target="cam_node"/>
+		</Unit>
+		<Unit filename="/home/demon/CLionProjects/Radar/camera2/src/camParaConfig.cpp">
+			<Option target="cam_node2"/>
+		</Unit>
+		<Unit filename="/home/demon/CLionProjects/Radar/camera2/src/cam_mode.cpp">
+			<Option target="cam_node2"/>
+		</Unit>
+		<Unit filename="/home/demon/CLionProjects/Radar/camera2/src/shm.cpp">
+			<Option target="cam_node2"/>
+		</Unit>
+		<Unit filename="/home/demon/CLionProjects/Radar/camera2/src/startFetch.cpp">
+			<Option target="cam_node2"/>
+		</Unit>
+		<Unit filename="/home/demon/CLionProjects/Radar/camera2/src/streamRetrieve.cpp">
+			<Option target="cam_node2"/>
+		</Unit>
 		<Unit filename="/home/demon/CLionProjects/Radar/main.cpp">
 			<Option target="Radar"/>
 		</Unit>
@@ -100,6 +261,9 @@
 		<Unit filename="/home/demon/CLionProjects/Radar/my_radar/inc/radar_main.hpp">
 			<Option target="Radar"/>
 		</Unit>
+		<Unit filename="/home/demon/CLionProjects/Radar/my_radar/inc/video_write.hpp">
+			<Option target="Radar"/>
+		</Unit>
 		<Unit filename="/home/demon/CLionProjects/Radar/my_radar/src/calculate.cpp">
 			<Option target="Radar"/>
 		</Unit>
@@ -107,6 +271,12 @@
 			<Option target="Radar"/>
 		</Unit>
 		<Unit filename="/home/demon/CLionProjects/Radar/my_radar/src/radar_main.cpp">
+			<Option target="Radar"/>
+		</Unit>
+		<Unit filename="/home/demon/CLionProjects/Radar/my_radar/src/video_write.cpp">
+			<Option target="Radar"/>
+		</Unit>
+		<Unit filename="/home/demon/CLionProjects/Radar/my_radar/switch_function.hpp">
 			<Option target="Radar"/>
 		</Unit>
 		<Unit filename="/home/demon/CLionProjects/Radar/CMakeLists.txt">
@@ -123,6 +293,15 @@
 		</Unit>
 		<Unit filename="/home/demon/CLionProjects/Radar/../../../../usr/local/lib/cmake/opencv4/OpenCVModules.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/demon/CLionProjects/Radar/../../../../usr/lib/cmake/eigen3/Eigen3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\cmake\eigen3\"/>
+		</Unit>
+		<Unit filename="/home/demon/CLionProjects/Radar/camera/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\camera\src\"/>
+		</Unit>
+		<Unit filename="/home/demon/CLionProjects/Radar/camera2/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\camera2\src\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

@@ -14,13 +14,13 @@ gainRawMin: 1
 gainRawMax: 6
 gainRawDefaults: 6
 #Armor Para
-GammaMy_Armor: 0.7
+GammaMy_Armor: 0.8
 gainRawMy_Armor: 6
-exposeTimeMy_Armor: 1500
+exposeTimeMy_Armor: 1000
 #Rune Para
 GammaMy_Rune: 0.7
-gainRawMy_Rune: 3
-exposeTimeMy_Rune: 600
+gainRawMy_Rune: 1
+exposeTimeMy_Rune: 700
 
 #咖玛值
 GammaMy: 0.7

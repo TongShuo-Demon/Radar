@@ -6,6 +6,20 @@
 
 #IncludeRegexTransform: 
 
+../camera/inc/shm.hpp
+iostream
+-
+opencv2/opencv.hpp
+-
+boost/thread.hpp
+-
+boost/interprocess/managed_shared_memory.hpp
+-
+boost/interprocess/sync/named_mutex.hpp
+-
+string.h
+-
+
 ../my_radar/inc/calculate.hpp
 iostream
 -
@@ -14,6 +28,12 @@ opencv2/opencv.hpp
 radar_main.hpp
 -
 pretreatment.hpp
+-
+eigen3/Eigen/Core
+-
+eigen3/Eigen/Geometry
+-
+opencv2/core/eigen.hpp
 -
 
 ../my_radar/inc/pretreatment.hpp
@@ -46,9 +66,51 @@ iostream
 opencv2/opencv.hpp
 -
 
-/home/demon/CLionProjects/Radar/my_radar/src/pretreatment.cpp
+../my_radar/inc/video_write.hpp
+iostream
+-
+fstream
+-
+dirent.h
+-
+sys/stat.h
+-
+opencv2/opencv.hpp
+-
+boost/date_time/posix_time/posix_time.hpp
+-
+boost/date_time/gregorian/greg_month.hpp
+-
+boost/date_time/gregorian/gregorian.hpp
+-
+boost/date_time/date_formatting.hpp
+-
+string
+-
+
+../my_radar/switch_function.hpp
+
+/home/demon/CLionProjects/Radar/main.cpp
+opencv2/imgcodecs.hpp
+/home/demon/CLionProjects/Radar/opencv2/imgcodecs.hpp
+opencv2/imgproc.hpp
+/home/demon/CLionProjects/Radar/opencv2/imgproc.hpp
+opencv2/videoio.hpp
+/home/demon/CLionProjects/Radar/opencv2/videoio.hpp
+opencv2/highgui.hpp
+-
+iostream
+-
 pretreatment.hpp
 -
+radar_main.hpp
+-
+shm.hpp
+-
+video_write.hpp
+/home/demon/CLionProjects/Radar/video_write.hpp
+switch_function.hpp
+/home/demon/CLionProjects/Radar/switch_function.hpp
 
 /usr/local/include/opencv4/opencv2/calib3d.hpp
 opencv2/core.hpp

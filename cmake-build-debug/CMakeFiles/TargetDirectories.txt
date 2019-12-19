@@ -1,3 +1,9 @@
 /home/demon/CLionProjects/Radar/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/demon/CLionProjects/Radar/cmake-build-debug/CMakeFiles/Radar.dir
 /home/demon/CLionProjects/Radar/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/demon/CLionProjects/Radar/cmake-build-debug/camera/src/CMakeFiles/rebuild_cache.dir
+/home/demon/CLionProjects/Radar/cmake-build-debug/camera/src/CMakeFiles/cam_node.dir
+/home/demon/CLionProjects/Radar/cmake-build-debug/camera/src/CMakeFiles/edit_cache.dir
+/home/demon/CLionProjects/Radar/cmake-build-debug/camera2/src/CMakeFiles/rebuild_cache.dir
+/home/demon/CLionProjects/Radar/cmake-build-debug/camera2/src/CMakeFiles/cam_node2.dir
+/home/demon/CLionProjects/Radar/cmake-build-debug/camera2/src/CMakeFiles/edit_cache.dir

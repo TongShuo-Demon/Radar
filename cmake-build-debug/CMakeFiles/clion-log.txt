@@ -1,14 +1,8 @@
 /opt/clion-2019.2.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/demon/CLionProjects/Radar
--- Looking for pthread.h
--- Looking for pthread.h - found
--- Looking for pthread_create
--- Looking for pthread_create - not found
--- Looking for pthread_create in pthreads
--- Looking for pthread_create in pthreads - not found
--- Looking for pthread_create in pthread
--- Looking for pthread_create in pthread - found
--- Found Threads: TRUE  
--- Found CUDA: /usr/local/cuda (found suitable exact version "9.0") 
+-- Boost version: 1.58.0
+-- Found the following Boost libraries:
+--   system
+--   atomic
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/demon/CLionProjects/Radar/cmake-build-debug

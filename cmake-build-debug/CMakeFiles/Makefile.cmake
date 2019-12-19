@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
+  "../camera/src/CMakeLists.txt"
+  "../camera2/src/CMakeLists.txt"
   "CMakeFiles/3.14.5/CMakeCCompiler.cmake"
   "CMakeFiles/3.14.5/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.14.5/CMakeSystem.cmake"
@@ -15,7 +17,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXInformation.cmake"
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCommonLanguageInclude.cmake"
-  "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/CMakeConfigurableFile.in"
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/CMakeFindCodeBlocks.cmake"
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/CMakeGenericSystem.cmake"
@@ -23,8 +24,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/CMakeLanguageInformation.cmake"
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/CMakeSystemSpecificInformation.cmake"
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/CMakeSystemSpecificInitialize.cmake"
-  "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/CheckFunctionExists.c"
-  "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/CheckIncludeFile.c.in"
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/CheckIncludeFile.cmake"
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/CheckLibraryExists.cmake"
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/CheckSymbolExists.cmake"
@@ -32,6 +31,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/Compiler/GNU-C.cmake"
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/Compiler/GNU-CXX.cmake"
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/Compiler/GNU.cmake"
+  "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/FindBoost.cmake"
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/FindCUDA.cmake"
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/FindCUDA/select_compute_arch.cmake"
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/FindPackageHandleStandardArgs.cmake"
@@ -44,6 +44,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/Platform/Linux.cmake"
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/Platform/UnixPaths.cmake"
   "/opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/ProcessorCount.cmake"
+  "/usr/lib/cmake/eigen3/Eigen3Config.cmake"
   "/usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake"
   "/usr/local/lib/cmake/opencv4/OpenCVConfig.cmake"
   "/usr/local/lib/cmake/opencv4/OpenCVModules-release.cmake"
@@ -59,9 +60,13 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "camera/src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "camera2/src/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Radar.dir/DependInfo.cmake"
+  "camera/src/CMakeFiles/cam_node.dir/DependInfo.cmake"
+  "camera2/src/CMakeFiles/cam_node2.dir/DependInfo.cmake"
   )

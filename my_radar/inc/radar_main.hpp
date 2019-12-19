@@ -15,14 +15,11 @@ namespace radar{
     extern int vehicle_min_area;                                  //小车最小面积
     extern int vehicle_max_area;                                  //小车最大面积
 
-
     extern cv::Ptr<cv::BackgroundSubtractor> pMOG2;               //MOG2 Background subtractor
     extern cv::Ptr<cv::BackgroundSubtractor> KNN;                 //MOG2 Background subtractor
     extern float vehicle_heigth_div_width_min;                    //高和宽的比值
     extern float vehicle_heigth_div_width_max;                     //高和宽的比值
     extern float pixel_percent_limit;                             //像素比约束
-
-
 
     void radar_init();
 }
